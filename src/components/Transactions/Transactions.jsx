@@ -13,11 +13,11 @@ export const Transactions = ({tansactions}) => {
                 </TrHead>
             </thead>
             <Tbody>
-                {tansactions.map(transactionsItem => (
-                    <TrTable key={transactionsItem.id}>
-                        <td>{transactionsItem.type}</td>
-                        <td>{transactionsItem.amount}</td>
-                        <td>{transactionsItem.currency}</td>
+                {tansactions.map(({ id, type, amount, currency }) => (
+                    <TrTable key={id}>
+                        <td>{type}</td>
+                        <td>{amount}</td>
+                        <td>{currency}</td>
                     </TrTable>
                 ))}
             </Tbody>
